@@ -1,0 +1,16 @@
+# 系统文件
+.DS_Store
+._*
+
+# 依赖包（全都不上传）
+node_modules/
+*/node_modules/
+
+# 编译产物
+dist/
+build/
+client/dist/
+client/build/
+
+# 日志
+*.log
