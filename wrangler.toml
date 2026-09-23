@@ -1,0 +1,8 @@
+name = "nfc-integration2-v2"
+main = "server/index.js"
+compatibility_date = "2026-09-22"
+
+[[d1_databases]]
+binding = "DB"           # 代码里通过 env.DB 访问
+database_name = "museum-db"
+database_id = "7fed6932-d0b3-4604-a0b6-f99aad2212df"

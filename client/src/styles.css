@@ -1,0 +1,395 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: LongboHeiti;
+    src: url("/assets/fonts/NotoSansSC-Medium.otf") format("opentype");
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --font-sans: SimHei, "Microsoft YaHei", "PingFang SC", sans-serif;
+    --text-xs: .875rem;
+    --text-xs--line-height: 1.55;
+    --text-sm: 1.0625rem;
+    --text-sm--line-height: 1.55;
+    --text-base: 1.125rem;
+    --text-base--line-height: 1.6;
+    --text-lg: 1.3rem;
+    --text-xl: 1.55rem;
+}
+
+:root {
+    --font-body: "LongboHeiti", SimHei, "Microsoft YaHei", "PingFang SC", sans-serif;
+    --font-display: var(--font-body);
+    --font-mono: var(--font-body);
+    font-family: var(--font-body);
+    color: #493323;
+    font-size: 16px;
+    background: #e7dccb;
+    font-synthesis: none
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    height: 100%
+}
+
+* {
+    box-sizing: border-box
+}
+
+button,
+input {
+    font-family: var(--font-body)
+}
+
+button {
+    cursor: pointer;
+    min-height: 44px
+}
+
+button:disabled {
+    cursor: default
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid #983f2b;
+    outline-offset: 3px
+}
+
+em {
+    font-style: normal;
+    font-weight: 700
+}
+
+.museum-stage {
+    min-height: 100svh;
+    padding: 12px 0;
+    background: radial-gradient(ellipse at top, #f8f1e4, #ded0ba)
+}
+
+.museum-frame {
+    border: 2px solid #ccb58d;
+    box-shadow: 0 24px 70px #533a2426 !important;
+    background: linear-gradient(125deg, #fbf5e9, #f3e8d4) !important
+}
+
+.museum-frame .rounded-xl {
+    border-radius: 12px
+}
+
+.museum-frame .flex-1 {
+    min-height: 0
+}
+
+.home-header {
+    position: relative;
+    padding-top: 38px
+}
+
+.home-header:before {
+    content: '';
+    position: absolute;
+    inset: 0 0 30% 0;
+    background-image: linear-gradient(90deg, #f8f1e4 15%, #f8f1e4b8 60%, #f8f1e499), url('/assets/visual/product-master.png');
+    background-size: cover;
+    background-position: center;
+    opacity: .48;
+    pointer-events: none
+}
+
+.home-header>* {
+    position: relative
+}
+
+.home-header h1 {
+    letter-spacing: -.02em;
+    line-height: 1.4
+}
+
+.home-header h1 em {
+    color: #983f2b !important
+}
+
+.exhibit-row {
+    min-height: 105px;
+    border-width: 1.5px !important
+}
+
+.exhibit-row .text-xs {
+    font-size: 13px
+}
+
+.exhibit-row>.flex-none:last-child {
+    gap: 4px
+}
+
+.exhibit-row .text-sm {
+    font-weight: 600;
+    line-height: 1.45
+}
+
+.exhibit-row>div:first-child {
+    min-width: 52px
+}
+
+.exhibit-row:hover {
+    box-shadow: 0 5px 16px #6b4a2110
+}
+
+.tap-screen>div {
+    flex-shrink: 0
+}
+
+.stamp-screen>div {
+    flex-shrink: 0
+}
+
+.stamp-grid button {
+    min-width: 0
+}
+
+.stamp-grid .text-xs {
+    font-size: 13px;
+    overflow-wrap: anywhere
+}
+
+.stamp-grid .text-xs.mt-0\.5 {
+    font-size: 11px !important
+}
+
+.answer-option {
+    min-height: 58px
+}
+
+.storage-notice {
+    padding: 10px 18px;
+    font-size: 13px;
+    flex-shrink: 0;
+    background: #eedbbc;
+    color: #654922;
+    border-top: 1px solid #c7aa7b
+}
+
+.museum-primary,
+.museum-secondary {
+    font: 600 16px/1.5 var(--font-body);
+    padding: 13px 16px;
+    border: 1px solid #987442;
+    border-radius: 10px;
+    min-height: 48px;
+    text-decoration: none
+}
+
+.museum-primary {
+    color: #fff7e7;
+    background: linear-gradient(120deg, #775334, #493323)
+}
+
+.museum-secondary {
+    color: #73512d;
+    background: #f5ead5
+}
+
+.museum-primary:disabled {
+    opacity: .5
+}
+
+.souvenir-screen input {
+    background: #fffaf0;
+    border-color: #b79a6d
+}
+
+.souvenir-preview {
+    padding: 16px;
+    border: 2px solid #b38d51;
+    outline: 1px solid #b38d51;
+    outline-offset: -6px;
+    text-align: center;
+    background: #fffaf0;
+    color: #65482b
+}
+
+.souvenir-preview p {
+    font-size: 14px;
+    margin: 9px 0
+}
+
+.souvenir-preview h3 {
+    font-size: 23px;
+    font-weight: 700
+}
+
+.souvenir-preview strong {
+    display: block;
+    font-size: 17px;
+    color: #983f2b;
+    margin: 14px 0
+}
+
+.souvenir-preview small {
+    display: block;
+    font-size: 12px;
+    color: #907b5c
+}
+
+/* 
+.souvenir-visual {
+    height: 160px;
+    background: url('/assets/exhibits/E03-2.png') center/cover
+} */
+
+.achievement-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    background: #2b1d13ba;
+    padding: 24px;
+    backdrop-filter: blur(3px)
+}
+
+.achievement-popup {
+    width: 100%;
+    background: radial-gradient(ellipse at top, #fffaf0, #eddec2);
+    border: 2px solid #b38d51;
+    border-radius: 16px;
+    outline: 1px solid #c6a56d;
+    outline-offset: -8px;
+    padding: 32px 22px 24px;
+    text-align: center;
+    box-shadow: 0 20px 60px #28170755;
+    animation: achievementReveal .4s ease-out;
+    max-height: 92%;
+    overflow: auto
+}
+
+.bronze-medal {
+    display: grid;
+    place-items: center;
+    width: 106px;
+    height: 106px;
+    border: 5px double #c29c55;
+    border-radius: 50%;
+    margin: 24px auto;
+    background: radial-gradient(circle at 30% 20%, #f0d191, #a5783b 58%, #58391d);
+    box-shadow: inset 0 0 0 3px #e2bb7177, 0 10px 24px #5b381e44;
+    color: #fff0cb;
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 0 2px 2px #583616
+}
+
+.achievement-popup h2 {
+    font-size: 27px
+}
+
+.saved-card img {
+    display: block
+}
+
+.museum-frame img:not([src^="data:"]) {
+    font-size: 13px;
+    color: #806a50
+}
+
+@keyframes achievementReveal {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(.92)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@media(max-width:500px) {
+    .museum-stage {
+        padding: 0
+    }
+
+    .museum-frame {
+        border-radius: 0 !important;
+        width: 100vw !important;
+        height: 100svh !important;
+        border: 0
+    }
+
+    .home-header {
+        padding-top: calc(28px + env(safe-area-inset-top))
+    }
+
+    .museum-frame .pt-14 {
+        padding-top: 32px
+    }
+}
+
+@media(max-width:360px) {
+    .museum-frame .px-6 {
+        padding-left: 16px;
+        padding-right: 16px
+    }
+
+    .museum-frame .px-8 {
+        padding-left: 20px;
+        padding-right: 20px
+    }
+
+    .home-header h1 {
+        font-size: 26px
+    }
+
+    .exhibit-row {
+        padding: 12px 10px !important;
+        gap: 9px
+    }
+
+    .exhibit-row>div:first-child {
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px
+    }
+
+    .exhibit-row .text-sm {
+        font-size: 16px
+    }
+
+    .exhibit-row .text-xs {
+        font-size: 12px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important
+    }
+}
+
+.task-art-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* cover → contain，完整显示不裁切 */
+    object-position: left;
+    display: block;
+}
+.task-art-banner {
+    display: grid;              /* 或 flex */
+    grid-template-columns: 1fr 1fr;   /* 左右各半 */
+  }
+  
